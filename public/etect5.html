@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grid area</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      .contaner {
+        width: 80%;
+        margin: 0 auto;
+        height: 300px;
+        display: grid;
+        grid-template-areas: " header header header header " "nav nav nav nav" " card1 card2 card3 card4 ";
+        grid-row-gap: 10px;
+        grid-column-gap: 10px;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 15% 20% 60%;
+      }
+      .header {
+        grid-area: header;
+        background-color: yellow;
+      }
+      .nav {
+        grid-area: nav;
+        background-color: green;
+      }
+      .card1 {
+        grid-area: card1;
+        background-color: cyan;
+      }
+      .card2 {
+        grid-area: card2;
+        background-color: orange;
+      }
+      .card3 {
+        grid-area: card3;
+        background-color: purple;
+      }
+      .card4 {
+        grid-area: card4;
+        background-color: pink;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="contaner">
+      <div class="header">header</div>
+      <div class="nav">navigation</div>
+      <div class="card1">Card</div>
+      <div class="card2">Card</div>
+      <div class="card3">Card</div>
+      <div class="card4">Card</div>
+    </div>
+  </body>
+</html>
